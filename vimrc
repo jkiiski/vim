@@ -2,6 +2,7 @@ execute pathogen#infect()
 
 " colorscheme solarized
 syntax on
+filetype plugin on
 set background=dark
 set shiftwidth=4
 set tabstop=4
