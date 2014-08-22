@@ -15,6 +15,8 @@ set listchars=tab:\ \ ,trail:·
 set list
 
 " generic mapping
+nmap <F5> :bp<CR>
+nmap <F6> :bn<CR>
 nmap <F12> :bdelete<CR>
 
 " cscope
@@ -26,6 +28,8 @@ if filereadable("cscope.out")
 elseif $CSCOPE_DB != ""
 	cs add $CSCOPE_DB
 endif
+
+nmap <F11> :!cscope -qRb<CR>
 
 nmap <C-@>s :cs find s <C-R>=expand("<cword>")<CR><CR>
 nmap <C-@>g :cs find g <C-R>=expand("<cword>")<CR><CR>
@@ -42,5 +46,9 @@ nmap <Leader>gd :Gdiff<CR>
 nmap <Leader>gg :diffget<CR>
 nmap <Leader>gp :diffput<CR>
 
+nmap <F9> :make!<CR>
+nmap <F3> :sh<CR>
+
 " gitgutter
 highlight clear SignColumn
+
