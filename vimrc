@@ -1,6 +1,6 @@
 execute pathogen#infect()
 
-colorscheme solarized
+" colorscheme solarized
 syntax on
 set background=dark
 set shiftwidth=4
