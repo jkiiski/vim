@@ -1,9 +1,10 @@
 execute pathogen#infect()
 
-" colorscheme solarized
+colorscheme solarized
 syntax on
 filetype plugin on
 set background=dark
+set smartindent
 set shiftwidth=4
 set tabstop=4
 set noexpandtab
@@ -18,7 +19,7 @@ set list
 " generic mapping
 nmap <F5> :bp<CR>
 nmap <F6> :bn<CR>
-nmap <F12> :bdelete<CR>
+nmap <F12> :bprevious<CR>:bdelete #<CR>
 
 " cscope
 set cscopetag
@@ -47,6 +48,7 @@ nmap <Leader>gd :Gdiff<CR>
 nmap <Leader>gg :diffget<CR>
 nmap <Leader>gp :diffput<CR>
 
+set makeprg=make\ -j8
 nmap <F9> :make!<CR>
 nmap <F3> :sh<CR>
 
