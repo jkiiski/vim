@@ -5,8 +5,9 @@ syntax on
 filetype plugin on
 set background=dark
 set smartindent
-set shiftwidth=4
-set tabstop=4
+set relativenumber
+set shiftwidth=8
+set tabstop=8
 set noexpandtab
 set colorcolumn=80
 set t_Co=256
@@ -52,6 +53,8 @@ set makeprg=make\ -j8
 nmap <F9> :make!<CR>
 nmap <F3> :sh<CR>
 
+nmap <F2> :NERDTreeToggle<CR>
 " gitgutter
 highlight clear SignColumn
 
+runtime! ftplugin/man.vim
