@@ -16,6 +16,10 @@ set incsearch
 set nu
 set listchars=tab:\ \ ,trail:·
 set list
+set modeline
+set clipboard=unnamedplus
+set smartcase
+set ignorecase
 
 " generic mapping
 nmap <F5> :bp<CR>
@@ -25,6 +29,8 @@ nmap <F12> :bprevious<CR>:bdelete #<CR>
 " cscope
 set cscopetag
 set csto=0
+set cst
+set cscopequickfix=s-,c-,d-,i-,t-,e-
 
 if filereadable("cscope.out")
 	cs add cscope.out
@@ -58,3 +64,7 @@ nmap <F2> :NERDTreeToggle<CR>
 highlight clear SignColumn
 
 runtime! ftplugin/man.vim
+set statusline=%F\ 
+set statusline+=%{fugitive#statusline()}\ 
+set statusline+=%=\ line:\ %l\ col:\ %v\ 
+set laststatus=2
