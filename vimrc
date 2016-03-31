@@ -20,6 +20,7 @@ set modeline
 set clipboard=unnamedplus
 set smartcase
 set ignorecase
+set mouse=a
 
 " generic mapping
 nmap <F5> :bp<CR>
@@ -31,6 +32,10 @@ set cscopetag
 set csto=0
 set cst
 set cscopequickfix=s-,c-,d-,i-,t-,e-
+nmap <C-j> :cp<CR>
+nmap <C-k> :cn<CR>
+set foldmethod=indent
+set foldlevel=99
 
 if filereadable("cscope.out")
 	cs add cscope.out
