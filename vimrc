@@ -1,11 +1,11 @@
 execute pathogen#infect()
 
-colorscheme solarized
+" colorscheme solarized
 syntax on
 filetype plugin on
 set background=dark
 set smartindent
-set relativenumber
+" set relativenumber
 set shiftwidth=8
 set tabstop=8
 set noexpandtab
@@ -21,6 +21,14 @@ set clipboard=unnamedplus
 set smartcase
 set ignorecase
 set mouse=a
+set formatoptions+=j
+
+highlight ColorColumn term=reverse ctermbg=1 guibg=LightRed
+highlight SpellBad cterm=underline
+set t_Cs=
+
+set undodir=~/local/tmp
+set undofile
 
 " generic mapping
 nmap <F5> :bp<CR>
@@ -73,3 +81,6 @@ set statusline=%F\
 set statusline+=%{fugitive#statusline()}\ 
 set statusline+=%=\ line:\ %l\ col:\ %v\ 
 set laststatus=2
+
+match ErrorMsg '\%>120v.\+'
+match ErrorMsg '\s\+$'
